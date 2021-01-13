@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\App.xaml
-161684820081
+17-1978305990
 13-561485005
-27365959153
+27-1747844456
 161813698912
-Login.xaml;MainWindow.xaml;SignUp.xaml;Style\Buttons.xaml;Style\Color.xaml;Style\Fonts.xaml;Style\Texts.xaml;Style\Window.xaml;User Control\Account.xaml;User Control\Cart.xaml;User Control\Category.xaml;User Control\Home.xaml;User Control\ItemProduct.xaml;User Control\ItemCart.xaml;User Control\List_Product.xaml;User Control\ProductDetail.xaml;
+AdminWindow.xaml;Login.xaml;MainWindow.xaml;SignUp.xaml;Style\Buttons.xaml;Style\Color.xaml;Style\Fonts.xaml;Style\Texts.xaml;Style\Window.xaml;User Control\Account.xaml;User Control\Cart.xaml;User Control\Category.xaml;User Control\Home.xaml;User Control\ItemProduct.xaml;User Control\ItemCart.xaml;User Control\List_Product.xaml;User Control\ProductDetail.xaml;
 
-True
+False
 

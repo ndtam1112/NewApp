@@ -1,0 +1,104 @@
+D:\My App\BuyNow\View\bin\Debug\View.exe.config
+D:\My App\BuyNow\View\bin\Debug\View.exe
+D:\My App\BuyNow\View\bin\Debug\View.pdb
+D:\My App\BuyNow\View\bin\Debug\MaterialDesignColors.dll
+D:\My App\BuyNow\View\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\My App\BuyNow\View\bin\Debug\WpfAnimatedGif.dll
+D:\My App\BuyNow\View\bin\Debug\MaterialDesignColors.pdb
+D:\My App\BuyNow\View\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\My App\BuyNow\View\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\My App\BuyNow\View\bin\Debug\WpfAnimatedGif.pdb
+D:\My App\BuyNow\View\bin\Debug\WpfAnimatedGif.xml
+D:\My App\BuyNow\View\obj\Debug\Login.g.cs
+D:\My App\BuyNow\View\obj\Debug\MainWindow.g.cs
+D:\My App\BuyNow\View\obj\Debug\SignUp.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\Account.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\Cart.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\Category.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\Home.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\ItemProduct.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\ItemCart.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\List_Product.g.cs
+D:\My App\BuyNow\View\obj\Debug\User Control\ProductDetail.g.cs
+D:\My App\BuyNow\View\obj\Debug\App.g.cs
+D:\My App\BuyNow\View\obj\Debug\View_Content.g.cs
+D:\My App\BuyNow\View\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My App\BuyNow\View\obj\Debug\View_MarkupCompile.cache
+D:\My App\BuyNow\View\obj\Debug\View_MarkupCompile.lref
+D:\My App\BuyNow\View\obj\Debug\App.baml
+D:\My App\BuyNow\View\obj\Debug\Login.baml
+D:\My App\BuyNow\View\obj\Debug\MainWindow.baml
+D:\My App\BuyNow\View\obj\Debug\SignUp.baml
+D:\My App\BuyNow\View\obj\Debug\Style\Buttons.baml
+D:\My App\BuyNow\View\obj\Debug\Style\Color.baml
+D:\My App\BuyNow\View\obj\Debug\Style\Fonts.baml
+D:\My App\BuyNow\View\obj\Debug\Style\Texts.baml
+D:\My App\BuyNow\View\obj\Debug\Style\Window.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\Account.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\Cart.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\Category.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\Home.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\ItemProduct.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\ItemCart.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\List_Product.baml
+D:\My App\BuyNow\View\obj\Debug\User Control\ProductDetail.baml
+D:\My App\BuyNow\View\obj\Debug\View.g.resources
+D:\My App\BuyNow\View\obj\Debug\View.Properties.Resources.resources
+D:\My App\BuyNow\View\obj\Debug\View.csproj.GenerateResource.cache
+D:\My App\BuyNow\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+D:\My App\BuyNow\View\obj\Debug\View.csproj.CopyComplete
+D:\My App\BuyNow\View\obj\Debug\View.exe
+D:\My App\BuyNow\View\obj\Debug\View.pdb
+D:\New folder (2)\BuyNow\View\obj\Debug\View.csprojAssemblyReference.cache
+D:\New folder (2)\BuyNow\View\obj\Debug\Login.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\MainWindow.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\SignUp.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Account.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Cart.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Category.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Home.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\ItemProduct.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\ItemCart.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\List_Product.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\ProductDetail.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\View_Content.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\View_MarkupCompile.cache
+D:\New folder (2)\BuyNow\View\obj\Debug\View_MarkupCompile.lref
+D:\New folder (2)\BuyNow\View\obj\Debug\View.exe
+D:\New folder (2)\BuyNow\View\obj\Debug\View.pdb
+D:\New folder (2)\BuyNow\View\bin\Debug\View.exe.config
+D:\New folder (2)\BuyNow\View\bin\Debug\View.exe
+D:\New folder (2)\BuyNow\View\bin\Debug\View.pdb
+D:\New folder (2)\BuyNow\View\bin\Debug\MaterialDesignColors.dll
+D:\New folder (2)\BuyNow\View\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\New folder (2)\BuyNow\View\bin\Debug\WpfAnimatedGif.dll
+D:\New folder (2)\BuyNow\View\bin\Debug\MaterialDesignColors.pdb
+D:\New folder (2)\BuyNow\View\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\New folder (2)\BuyNow\View\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\New folder (2)\BuyNow\View\bin\Debug\WpfAnimatedGif.pdb
+D:\New folder (2)\BuyNow\View\bin\Debug\WpfAnimatedGif.xml
+D:\New folder (2)\BuyNow\View\obj\Debug\App.g.cs
+D:\New folder (2)\BuyNow\View\obj\Debug\App.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\Login.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\MainWindow.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\SignUp.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\Style\Buttons.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\Style\Color.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\Style\Fonts.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\Style\Texts.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\Style\Window.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Account.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Cart.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Category.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\Home.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\ItemProduct.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\ItemCart.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\List_Product.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\User Control\ProductDetail.baml
+D:\New folder (2)\BuyNow\View\obj\Debug\View.g.resources
+D:\New folder (2)\BuyNow\View\obj\Debug\View.Properties.Resources.resources
+D:\New folder (2)\BuyNow\View\obj\Debug\View.csproj.GenerateResource.cache
+D:\New folder (2)\BuyNow\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+D:\New folder (2)\BuyNow\View\obj\Debug\View.csproj.CopyComplete
+D:\My App\BuyNow\View\obj\Debug\View.csprojAssemblyReference.cache

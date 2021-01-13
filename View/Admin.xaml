@@ -1,0 +1,105 @@
+﻿<Window x:Class="View.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:View"
+        Background="White"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Title="Admin" Height="621" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Width="250" Height="250" BorderThickness="1" Margin="0 10 0 0"
+                        BorderBrush="Gray">
+                <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png" 
+                       Stretch="Uniform"/>
+            </Border>
+            <Button Grid.Row="1" Content="Add main thumb" Width="230"/>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border BorderThickness="1" BorderBrush="Gray" Margin="5">
+                    <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png" 
+                       Stretch="Uniform"/>
+                </Border>
+                <Border BorderThickness="1" Grid.Column="1" BorderBrush="Gray" Margin="5">
+                    <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png" 
+                       Stretch="Uniform"/>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Add thumb 2" Width="150"/>
+                <Button Content="Add thumb 3" Grid.Column="1" Width="150"/>
+            </Grid>
+        </Grid>
+        <Separator/>
+        <StackPanel Grid.Column="1" Margin="10">
+            <Border Background="White" Width="120" Height="60" HorizontalAlignment="Left" 
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="5">
+                <TextBox materialDesign:HintAssist.Hint="SKU"
+                    BorderThickness="0" FontSize="15"
+                             Width="280"  Margin="10 5 0 0"
+                             VerticalAlignment="Center" HorizontalAlignment="Left"
+                             Grid.Column="1">
+                </TextBox>
+            </Border>
+            <Border Background="White" Width="400" Height="60" HorizontalAlignment="Left" 
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="5">
+                <TextBox materialDesign:HintAssist.Hint="Name Product"
+                    BorderThickness="0" FontSize="15"
+                             Width="280"  Margin="10 5 0 0"
+                             VerticalAlignment="Center" HorizontalAlignment="Left"
+                             Grid.Column="1">
+                </TextBox>
+            </Border>
+            <Border Background="White" Width="400" Height="60" HorizontalAlignment="Left" 
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="5">
+                <TextBox materialDesign:HintAssist.Hint="Price Product"
+                    BorderThickness="0" FontSize="15"
+                             Width="280"  Margin="10 5 0 0"
+                             VerticalAlignment="Center" HorizontalAlignment="Left"
+                             Grid.Column="1">
+                </TextBox>
+            </Border>
+            <ComboBox FontSize="20" Margin="30"
+                                  x:Name="cbCategory"
+                    Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+                    materialDesign:ColorZoneAssist.Mode="Inverted"
+                    materialDesign:HintAssist.Hint="Category"
+                    materialDesign:HintAssist.HelperText="Select one Category"
+                    Width="100" HorizontalAlignment="Left">
+                <ComboBoxItem Content="TShirt" />
+                <ComboBoxItem Content="Short" />
+                <ComboBoxItem Content="Sweater" />
+                <ComboBoxItem Content="Pants" />
+                <ComboBoxItem Content="Jacket" />
+                <ComboBoxItem Content="Bag" />
+            </ComboBox>
+            <Button Content="Save" Width="150"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

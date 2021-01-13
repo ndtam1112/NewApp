@@ -1,0 +1,204 @@
+﻿<Window x:Class="View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:View"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Title="Main" Height="621" Width="1000">
+    <Window.Resources>
+            <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+    </Window.Resources>
+
+    <Grid>
+        <Border x:Name="border" BorderThickness="1" BorderBrush="#FF000000" CornerRadius="20" Padding="1"
+        HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Border Name="mask" Background="White" CornerRadius="{Binding ElementName=border, Path=CornerRadius}"/>
+                <Grid  x:Name="HomeLayout">
+                    <Grid.OpacityMask>
+                        <VisualBrush Visual="{Binding ElementName=mask}"/>
+                    </Grid.OpacityMask>
+                    <MediaElement x:Name="movieLoader" HorizontalAlignment="Left" Height="621" LoadedBehavior="Play"
+                          VerticalAlignment="Top" Width="1000" >
+                        <MediaElement.Triggers>
+                            <EventTrigger RoutedEvent="MediaElement.Loaded">
+                                <EventTrigger.Actions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <MediaTimeline Source="D:\My App\BuyNow\View\image\thumb\Untitled-design.mp4" Storyboard.TargetName="movieLoader" RepeatBehavior="Forever" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger.Actions>
+                            </EventTrigger>
+                        </MediaElement.Triggers>
+                    </MediaElement>
+                    
+                </Grid>
+            </Grid>
+        </Border>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="61" />
+                <RowDefinition Height="560" />
+            </Grid.RowDefinitions>
+
+            <!--#region Thanh Bar trên -->
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Background="Transparent"
+                                Height="50"
+                                BorderThickness="0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+							    x:Name="btnHome"
+							    Click ="btnHome_Click"  Margin="3,0">
+                    <Image Source="image\icon\home.ico" />
+                </Button>
+
+                <Button Background="Transparent"
+                                Height="50"
+                                x:Name="btnCategory"
+                                BorderThickness="0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+
+                                Click="btnCategory_Click" Margin="3,0">
+                    <Image Source="image\icon\category.ico"></Image>
+                </Button>
+
+                <Button Background="Transparent"
+                                Height="50"
+                                BorderThickness="0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+								x:Name="btnMe"
+								Click="btnMe_Click" Margin="3,0">
+                    <Image Source="image\icon\account.ico" ></Image>
+                </Button>
+                
+                <TextBox x:Name="search"
+                         Foreground="GreenYellow"
+                         FontSize="18"
+                         TextAlignment="Center"
+                         Padding="2 4 0 0" 
+                         materialDesign:HintAssist.Hint="Search by id . . ." Height="50" Width="240"></TextBox>
+
+                <Button Background="Transparent"
+                                Height="50"
+                                BorderThickness="0"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+								x:Name="btnSearch"
+								Click="btnSearch_Click" Margin="3,0">
+                    <Image Source="image\icon\search.ico" ></Image>
+                </Button>
+
+
+            </StackPanel>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Tên shop và logo -->
+                <DockPanel>
+                    <Image Source="D:\My App\BuyNow\View\image\thumb\logo-2.ico" Margin="8" Width="43" />
+                    <TextBlock Text="ShopName®" FontSize="25" Margin="5 0 0 0" Style="{DynamicResource TextBlockStyle}" />
+                </DockPanel>
+
+                <!-- Biểu tượng giỏ hàng và menu Button -->
+
+                <materialDesign:PopupBox
+                    Style="{StaticResource MaterialDesignMultiFloatingActionAccentPopupBox}"
+                    PlacementMode="BottomAndAlignRightEdges" Grid.Column="4" Height="40" Width="40"
+                     Background="Transparent" Margin="5">
+                    <materialDesign:PopupBox.ToggleContent>
+                        <Image Source="image\icon\xbox_menu.ico" />
+                    </materialDesign:PopupBox.ToggleContent>
+
+                    <StackPanel>
+                        <Button Height="25" Width="25"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        BorderThickness="0"
+                            Margin="3" Style="{DynamicResource MaterialDesignFlatAccentBgButton}"
+                        x:Name="btnSignOut"
+                        Click="btnSignOut_Click">
+                            <Button.Background>
+                                <ImageBrush ImageSource="image\icon\sign-out.ico" />
+                            </Button.Background>
+                        </Button>
+
+                        <Button Height="25" Width="25"
+                        x:Name="btnMinimize"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                            Margin="3"
+                        Click="btnMinimized_Click"
+                        BorderThickness="0" Style="{DynamicResource macos-minimize-style}">
+                            <Button.Background>
+                                <ImageBrush ImageSource="image\icon\macos-minimize-2.png" />
+                            </Button.Background>
+                        </Button>
+
+                        <Button Height="25" Width="25"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Right"
+                        BorderThickness="0"
+                            Margin="3"
+                        x:Name="btnClose"
+                        Click="btnClose_Click" Style="{DynamicResource close-window-style}">
+                            <Button.Background>
+                                <ImageBrush ImageSource="image\icon\close-window-2.png" />
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+                
+                <Button Width="30" Height="30" 
+                        VerticalAlignment="Center" Margin="5"
+                                BorderThickness="0" Grid.Column="3"
+                        HorizontalAlignment="Center" Background="Transparent"
+                        x:Name="btnCart" Click="btnCart_Click"
+                         Padding="0">
+                    <Image Source="D:\My App\BuyNow\View\image\icon\cart.ico"/>
+                    <!--<DockPanel>
+                        <TextBlock Text="0" Margin="0 0 5 0"/>
+                        <Border BorderThickness="0 0 1 0" BorderBrush="{DynamicResource ForeGrayBrush}" RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="26.565"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                        </Border>
+                        <TextBlock Margin="5 0 3 0" Text="0"/>
+                        <TextBlock Text="VND"/>
+                    </DockPanel>-->
+                </Button>
+               
+            </Grid>
+            <Grid Grid.Row="1" x:Name="mainLayout">
+                
+            </Grid>
+
+            <!--#endregion-->
+
+        </Grid>
+    </Grid>
+</Window>

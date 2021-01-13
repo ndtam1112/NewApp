@@ -1,0 +1,137 @@
+﻿<UserControl x:Class="View.User_Control.Category"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:View.User_Control"
+             mc:Ignorable="d"
+             d:DesignHeight="621" d:DesignWidth="1000">
+    <UserControl.Resources>
+        <Style x:Key="BaseBorder" TargetType="Border">
+            <Setter Property="Background" Value="{x:Null}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Style.Triggers>
+                <Trigger Property="Border.IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Black" />
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <BlurEffect Radius="10" KernelType="Gaussian" />
+                        </Setter.Value>
+                    </Setter>
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width"
+                    To="450" From="500" Duration="0:0:0.5"
+                    AccelerationRatio="0.4" DecelerationRatio="0.4" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height"
+                    To="450" From="500" Duration="0:0:0.5"
+                    AccelerationRatio="0.4" DecelerationRatio="0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width"
+                    To="500" From="450" Duration="0:0:1"
+                    AccelerationRatio="0.4" DecelerationRatio="0.4" />
+                                <DoubleAnimation Storyboard.TargetProperty="Height"
+                    To="500" From="450" Duration="0:0:1"
+                    AccelerationRatio="0.4" DecelerationRatio="0.4" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="CategoryLayout">
+        <Border CornerRadius="20">
+            <Grid>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Button x:Name="TShirt" Click="TShirt_Click" Height="500" Width="500" BorderThickness="0" Padding="0"
+                                MouseLeave="TShirt_MouseLeave" PreviewMouseMove="TShirt_PreviewMouseMove" Background="Transparent">
+                                <Grid>
+                                    <Border Style="{DynamicResource BaseBorder}">
+                                        <Image Source="..\image\category\t-shirt.jpg" />
+                                    </Border>
+                                    <TextBlock x:Name="tShirt" Text="T-Shirts" Opacity="0" Style="{DynamicResource NameProductCartStyle}" />
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Jacket"  Height="500" Width="500" Background="Transparent"
+                                BorderThickness="0" Padding="0" MouseLeave="Jacket_MouseLeave" PreviewMouseMove="Jacket_PreviewMouseMove"
+                                    Grid.Column="1" Click="Jacket_Click">
+                                <Grid>
+                                    <Border Style="{DynamicResource BaseBorder}">
+                                        <Image Stretch="UniformToFill" Source="..\image\category\jacket.jpg" ></Image>
+                                    </Border>
+                                    <TextBlock x:Name="jacket" Text="Jackets" Opacity="0" Style="{DynamicResource NameProductCartStyle}" />
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Sweater" Click="Sweater_Click" Height="500" Width="500" Background="Transparent"
+                                 BorderThickness="0" Padding="0" MouseLeave="Sweater_MouseLeave" PreviewMouseMove="Sweater_PreviewMouseMove"
+                                Grid.Row="1">
+                                <Grid>
+                                    <Border Style="{DynamicResource BaseBorder}">
+                                        <Image Stretch="UniformToFill" Source="..\image\category\sweater.jpg" ></Image>
+                                    </Border>
+                                    <TextBlock x:Name="sweater" Text="Sweaters" Opacity="0" Style="{DynamicResource NameProductCartStyle}" />
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Pants" Click="Pants_Click" Height="500" Width="500" Background="Transparent"
+                                 BorderThickness="0" Padding="0" MouseLeave="Pants_MouseLeave" PreviewMouseMove="Pants_PreviewMouseMove"
+                                Grid.Column="1" Grid.Row="1">
+                                <Grid>
+                                    <Border Style="{DynamicResource BaseBorder}">
+                                        <Image Stretch="UniformToFill" Source="..\image\category\pants.jpg" ></Image>
+                                    </Border>
+                                    <TextBlock x:Name="pants" Text="Pants" Opacity="0" Style="{DynamicResource NameProductCartStyle}" />
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Short" Click="Short_Click" Height="500" Width="500" Background="Transparent"
+                                BorderThickness="0" MouseLeave="Short_MouseLeave" PreviewMouseMove="Short_PreviewMouseMove"
+                                Padding="0" Grid.Row="2">
+                                <Grid>
+                                    <Border Style="{DynamicResource BaseBorder}">
+                                        <Image Stretch="UniformToFill" Source="..\image\category\short.jpg" ></Image>
+                                    </Border>
+                                    <TextBlock x:Name="short" Text="Shorts" Opacity="0" Style="{DynamicResource NameProductCartStyle}" />
+                                </Grid>
+                            </Button>
+
+                            <Button x:Name="Bags" Click="Bags_Click" Height="500" Width="500" Background="Transparent"
+                                BorderThickness="0" MouseLeave="Bags_MouseLeave" PreviewMouseMove="Bags_PreviewMouseMove"
+                                Padding="0" Grid.Row="2" Grid.Column="2">
+                                <Grid>
+                                    <Border Style="{DynamicResource BaseBorder}">
+                                        <Image Stretch="UniformToFill" Source="..\image\category\bag.jpg" ></Image>
+                                    </Border>
+                                    <TextBlock x:Name="bag" Text="Bags" Opacity="0" Style="{DynamicResource NameProductCartStyle}" />
+                                </Grid>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

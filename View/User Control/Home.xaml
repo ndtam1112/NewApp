@@ -1,0 +1,188 @@
+﻿<UserControl x:Class="View.User_Control.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+
+             xmlns:local="clr-namespace:View.User_Control"
+             mc:Ignorable="d"
+             Name="home"
+             d:DesignHeight="621" d:DesignWidth="1000">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+
+        <StackPanel>
+
+            <!-- Thumb -->
+
+            <Grid Height="621" Width="1000">
+
+                <Border CornerRadius="20" Opacity="0" x:Name="thumb1">
+                    <Border.Background>
+                        <ImageBrush ImageSource="..\image\thumb\thumb-2.jpg" Stretch="UniformToFill">
+                        </ImageBrush>
+                    </Border.Background>
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Image.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="thumb1"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0.0" To="1.0" Duration="0:0:6" />
+                                    <DoubleAnimation Storyboard.TargetName="thumb1"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="1.0" To="0.0" Duration="0:0:6" BeginTime="0:0:10" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+
+                <Border CornerRadius="20" Opacity="0" x:Name="thumb3">
+                    <Border.Background>
+                        <ImageBrush ImageSource="..\image\thumb\thumb-3.jpg" Stretch="UniformToFill">
+                        </ImageBrush>
+                    </Border.Background>
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Image.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="thumb3"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0.0" To="1.0" Duration="0:0:6" BeginTime="0:0:15" />
+                                    <DoubleAnimation Storyboard.TargetName="thumb3"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="1.0" To="0.0" Duration="0:0:6" BeginTime="0:0:26" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+                <Border CornerRadius="20" Opacity="0" x:Name="thumb2">
+                    <Border.Background>
+                        <ImageBrush ImageSource="..\image\thumb\thumb-1.jpg" Stretch="UniformToFill">
+                        </ImageBrush>
+                    </Border.Background>
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Image.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="thumb2"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0.0" To="1.0" Duration="0:0:6" BeginTime="0:0:31" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+
+                <Image gif:ImageBehavior.RepeatBehavior="Forever" x:Name="scroll" Opacity="0"
+                        gif:ImageBehavior.AnimatedSource="..\image\icon\scroll.gif"
+                       Width="80" VerticalAlignment="Bottom" Margin="0 0 0 60">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Image.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="scroll"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0.0" To="1.0" Duration="0:0:3" BeginTime="0:0:31" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                </Image>
+            </Grid>
+            <Grid Margin="0 30 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="600" />
+                </Grid.RowDefinitions>
+                <DockPanel>
+                    <Border Width="300" Margin="50 0" Height="1" BorderThickness="1" BorderBrush="{DynamicResource BackgroundGrayBrush}" />
+                    <TextBlock Text="Best Seller" Style="{DynamicResource BaseTextBlockStyle}"
+                       FontSize="30" Foreground="{DynamicResource BackgroundGrayBrush}" />
+                    <Border Width="300" Margin="50 0" Height="1" BorderThickness="1" BorderBrush="{DynamicResource BackgroundGrayBrush}" />
+                </DockPanel>
+
+                <Grid Margin="200 20" Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Button Padding="0" BorderThickness="0" Margin="0 0 5 0"
+                            x:Name="btnSale1" Click="btnSale1_Click"
+                        Grid.RowSpan="2" Height="600">
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding Image1,ElementName=home}"
+                                        Stretch="UniformToFill" />
+                        </Button.Background>
+                    </Button>
+                    <Button Padding="0" BorderThickness="0" x:Name="btnSale2" Click="btnSale2_Click"
+                        Height="275" Margin="5 0 0 5" Grid.Column="1">
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding Image2,ElementName=home}"
+                                        Stretch="Uniform" />
+                        </Button.Background>
+                    </Button>
+                    <Button Margin="5 5 0 0" Grid.Column="1" Grid.Row="1"
+                            Padding="0" BorderThickness="0" x:Name="btnSale3" Click="btnSale3_Click"
+                            Height="275">
+                        <Button.Background>
+                            <ImageBrush ImageSource="{Binding Image,ElementName=home}"
+                                        Stretch="Uniform" />
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+
+            <DockPanel Margin="10" HorizontalAlignment="Center">
+                <Button Margin="10" BorderThickness="0 ">
+                    <Button.ToolTip>
+                        <TextBlock Foreground="{DynamicResource BackgroundLightBrush}"
+                                           Text="Facebook">
+                        </TextBlock>
+                    </Button.ToolTip>
+                    <Button.Background>
+                        <ImageBrush ImageSource="..\image\icon\facebook.ico" />
+                    </Button.Background>
+                </Button>
+                <Button Margin="10" BorderThickness="0 ">
+                    <Button.ToolTip>
+                        <TextBlock Foreground="{DynamicResource BackgroundLightBrush}"
+                                           Text="Instagram">
+                        </TextBlock>
+                    </Button.ToolTip>
+                    <Button.Background>
+                        <ImageBrush ImageSource="..\image\icon\instagram.ico" />
+                    </Button.Background>
+                </Button>
+                <Button Margin="10" BorderThickness="0 ">
+                    <Button.ToolTip>
+                        <TextBlock Foreground="{DynamicResource BackgroundLightBrush}"
+                                           Text="Twitter">
+                        </TextBlock>
+                    </Button.ToolTip>
+                    <Button.Background>
+                        <ImageBrush ImageSource="..\image\icon\twitter.ico" />
+                    </Button.Background>
+                </Button>
+                <Button Margin="10" BorderThickness="0 ">
+                    <Button.ToolTip>
+                        <TextBlock Foreground="{DynamicResource BackgroundLightBrush}"
+                                           Text="Website">
+                        </TextBlock>
+                    </Button.ToolTip>
+                    <Button.Background>
+                        <ImageBrush ImageSource="..\image\icon\website.ico" />
+                    </Button.Background>
+                </Button>
+            </DockPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

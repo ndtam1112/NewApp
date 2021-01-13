@@ -9,6 +9,7 @@
         mc:Ignorable="d"
         WindowStyle="None"
         ResizeMode="NoResize"
+        Name="Imageadmin"
         WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Title="AdminWindow" Height="621" Width="1000">
@@ -27,21 +28,26 @@
             <Border Width="250" Height="250" BorderThickness="1" Margin="0 10 0 0"
                         BorderBrush="Gray">
                 <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png" 
+                       x:Name="Image_product_main"
                        Stretch="Uniform"/>
             </Border>
-            <Button Grid.Row="1" Content="Add main thumb" Width="230"/>
+            <Button Background="Gray" Height="50" Width="150" Grid.Row="1" x:Name="btnAddThumb_Main"
+                                FontFamily="{StaticResource LatoThin}" Content="Add main thumb" Click="btnAddThumb_Main_Click"
+                                materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="{StaticResource MaterialDesignFlatButtonClick}"/>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Border BorderThickness="1" BorderBrush="Gray" Margin="5">
-                    <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png" 
+                <Border BorderThickness="1" BorderBrush="Gray" Margin="10">
+                    <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png"
+                           x:Name="Image_Sub_1"
                        Stretch="Uniform"/>
                 </Border>
-                <Border BorderThickness="1" Grid.Column="1" BorderBrush="Gray" Margin="5">
+                <Border BorderThickness="1" Grid.Column="1" BorderBrush="Gray" Margin="10">
                     <Image Source="image\SanPham\Short\Casual-Reflection-Short-Black.png" 
-                       Stretch="Uniform"/>
+                            x:Name="Image_Sub_2"
+                           Stretch="Uniform"/>
                 </Border>
             </Grid>
             <Grid Grid.Row="3">
@@ -49,40 +55,57 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Content="Add thumb 2" Width="150"/>
-                <Button Content="Add thumb 3" Grid.Column="1" Width="150"/>
+				<Button Background="Gray" Height="50" Width="150"  x:Name="btnAddThumb2" Click="btnAddThumb2_Click"
+                                FontFamily="{StaticResource LatoThin}" Content="Add thumb 2"
+                                materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="{StaticResource MaterialDesignFlatButtonClick}"/>
+		<Button Background="Gray" Height="50" Width="150" x:Name="btnAddThumb3" Click="btnAddThumb3_Click"
+                                FontFamily="{StaticResource LatoThin}" Content="Add thumb 3" Grid.Column="1"
+                                materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="{StaticResource MaterialDesignFlatButtonClick}"/>
             </Grid>
         </Grid>
-        <Separator/>
-        <StackPanel Grid.Column="1" Margin="10">
-            <Border Background="White" Width="120" Height="60" HorizontalAlignment="Left" 
-                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="5">
+        <StackPanel Grid.Column="1" Margin="0 50">
+            <Border Background="White" Width="120" Height="50" HorizontalAlignment="Left" 
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="10">
                 <TextBox materialDesign:HintAssist.Hint="SKU"
-                    BorderThickness="0" FontSize="15"
+                    BorderThickness="0" FontSize="15" x:Name="Id_product"
+                             Width="280"  Margin="10 5 0 0"
+                             VerticalAlignment="Center" HorizontalAlignment="Left"
+                             Grid.Column="1">
+                </TextBox>
+            </Border>
+            <Border Background="White" Width="120" Height="50" HorizontalAlignment="Left" 
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="10">
+                <TextBox materialDesign:HintAssist.Hint="Mount"
+                    BorderThickness="0" FontSize="15" x:Name="Mount_product"
                              Width="280"  Margin="10 5 0 0"
                              VerticalAlignment="Center" HorizontalAlignment="Left"
                              Grid.Column="1">
                 </TextBox>
             </Border>
             <Border Background="White" Width="400" Height="60" HorizontalAlignment="Left" 
-                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="5">
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="10">
                 <TextBox materialDesign:HintAssist.Hint="Name Product"
-                    BorderThickness="0" FontSize="15"
+                    BorderThickness="0" FontSize="15" x:Name="Name_product"
                              Width="280"  Margin="10 5 0 0"
                              VerticalAlignment="Center" HorizontalAlignment="Left"
                              Grid.Column="1">
                 </TextBox>
             </Border>
             <Border Background="White" Width="400" Height="60" HorizontalAlignment="Left" 
-                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="5">
+                     BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Margin="10">
                 <TextBox materialDesign:HintAssist.Hint="Price Product"
-                    BorderThickness="0" FontSize="15"
+                    BorderThickness="0" FontSize="15" x:Name="Price_product"
                              Width="280"  Margin="10 5 0 0"
                              VerticalAlignment="Center" HorizontalAlignment="Left"
                              Grid.Column="1">
                 </TextBox>
             </Border>
-            <ComboBox FontSize="20" Margin="30"
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ComboBox FontSize="20" Margin="30"
                                   x:Name="cbCategory"
                     Style="{StaticResource MaterialDesignFloatingHintComboBox}"
                     materialDesign:TextFieldAssist.HasClearButton="True"
@@ -90,15 +113,20 @@
                     materialDesign:ColorZoneAssist.Mode="Inverted"
                     materialDesign:HintAssist.Hint="Category"
                     materialDesign:HintAssist.HelperText="Select one Category"
-                    Width="100" HorizontalAlignment="Left">
-                <ComboBoxItem Content="TShirt" />
-                <ComboBoxItem Content="Short" />
-                <ComboBoxItem Content="Sweater" />
-                <ComboBoxItem Content="Pants" />
-                <ComboBoxItem Content="Jacket" />
-                <ComboBoxItem Content="Bag" />
-            </ComboBox>
-            <Button Content="Save" Width="150"/>
+                    Width="100" HorizontalAlignment="Center">
+                    <ComboBoxItem Content="TShirt" />
+                    <ComboBoxItem Content="Short" />
+                    <ComboBoxItem Content="Sweater" />
+                    <ComboBoxItem Content="Pants" />
+                    <ComboBoxItem Content="Jacket" />
+                    <ComboBoxItem Content="Bag" />
+                </ComboBox>
+
+
+            </Grid>
+			<Button Background="Gray" Height="50" Width="150"  x:Name="btnAdd_product"
+                                FontFamily="{StaticResource LatoThin}" Content="Save" Click="btnAdd_product_Click"
+                                materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="{StaticResource MaterialDesignFlatButtonClick}"/>
         </StackPanel>
 
     </Grid>

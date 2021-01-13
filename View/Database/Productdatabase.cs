@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 using View.Classess;
 using View.Utils;
 
@@ -44,9 +45,9 @@ namespace View.Database
                 Connection.CloseConnection();
             }
             return pr;
-           
+
         }
-        public static bool UpdateStatusHistory (string phone, string status, string id)
+        public static bool UpdateStatusHistory(string phone, string status, string id)
         {
             try
             {
@@ -54,14 +55,11 @@ namespace View.Database
                 Connection.OpenConnection();
                 Connection.cmd.CommandType = System.Data.CommandType.Text;
                 Connection.cmd.CommandText = sqlQuery;
-
                 Connection.cmd.Parameters.Clear();
-
                 Connection.cmd.Parameters.AddWithValue("@Id", id);
                 Connection.cmd.Parameters.AddWithValue("@Phone", phone);
                 Connection.cmd.Parameters.AddWithValue("@Status", 1);
                 Connection.cmd.ExecuteScalar();
-
                 MessageBox.Show("Update status successfully!");
                 return true;
             }
@@ -87,23 +85,23 @@ namespace View.Database
                 Connection.cmd.Parameters.Clear();
                 Connection.cmd.Parameters.AddWithValue("@id", id);
                 Connection.cmd.ExecuteScalar();
-                
+
             }
             catch (Exception e)
             {
                 MessageBox.Show("Error delete Product " + e.Message);
-                
+
             }
             finally
             {
-               
+
                 Connection.CloseConnection();
             }
-          
+
 
         }
 
-        public static bool InsertToHistory(string id, string phone, byte status, string size,int quantity,int price)
+        public static bool InsertToHistory(string id, string phone, byte status, string size, int quantity, int price)
         {
             bool check = false;
             string sqlQuery = $"Insert into _tb_history values(@id,@phone,@status,@size,@quantity,@sumprice);";
@@ -122,7 +120,7 @@ namespace View.Database
 
                 Connection.cmd.ExecuteScalar();
                 check = true;
-               
+
             }
             catch (Exception e)
             {
@@ -136,11 +134,118 @@ namespace View.Database
             return check;
 
         }
-       
+        public static bool insertProduct(string id, string name, string price, string category)
+        {
+
+            string sqlQuery = $"insert into _tb_product values(@_id_product,@_name_product,@_price_product,@_category_product);";
+            try
+            {
+                Connection.OpenConnection();
+                Connection.cmd.CommandType = CommandType.Text;
+                Connection.cmd.CommandText = sqlQuery;
+                Connection.cmd.Parameters.Clear();
+                Connection.cmd.Parameters.AddWithValue("@_id_product", id);
+                Connection.cmd.Parameters.AddWithValue("@_name_product", name);
+                Connection.cmd.Parameters.AddWithValue("@_price_product", price);
+                Connection.cmd.Parameters.AddWithValue("@_category_product", category);
+                Connection.cmd.ExecuteScalar();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error InsertProduct " + e.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.CloseConnection();
+            }
+        }
+        public static void insertImage(string id, string size, string amount, BitmapImage image)
+        {
+
+            string sqlQuery = $"Insert into _tb_image values(@_id_product,@_size_product,@_amount_product,@_image_product);";
+            try
+            {
+                Connection.OpenConnection();
+                Connection.cmd.CommandType = CommandType.Text;
+                Connection.cmd.CommandText = sqlQuery;
+                Connection.cmd.Parameters.Clear();
+                Connection.cmd.Parameters.AddWithValue("@_id_product", id);
+                Connection.cmd.Parameters.AddWithValue("@_size_product", size);
+                Connection.cmd.Parameters.AddWithValue("@_amount_product", amount);
+                Connection.cmd.Parameters.AddWithValue("@_image_product", Helpers.ConvertImageToByte(image));
+                Connection.cmd.ExecuteScalar();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error InsertImage " + e.Message);
+
+            }
+            finally
+            {
+                Connection.CloseConnection();
+            }
+        }
+
+        public static bool UpdateToProduct(string id, string name, string price)
+        {
+            try
+            {
+                string sqlQuery = "update _tb_product set _name_product = @_name_product, _price_product = @_price_product where _id_product = @_id_product;";
+                Connection.OpenConnection();
+                Connection.cmd.CommandType = System.Data.CommandType.Text;
+                Connection.cmd.CommandText = sqlQuery;
+                Connection.cmd.Parameters.Clear();
+                Connection.cmd.Parameters.AddWithValue("@_id_product", id);
+                Connection.cmd.Parameters.AddWithValue("@_name_product", name);
+                Connection.cmd.Parameters.AddWithValue("@_price_product", price);
+                Connection.cmd.ExecuteScalar();
+                
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("update to product: " + e.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.CloseConnection();
+            }
+        }
+        public static bool UpdateToImage(string id, string amount)
+        {
+            try
+            {
+                string sqlQuery = "update _tb_product set _amount_product = @_amount_product where _id_product = @_id_product;";
+                Connection.OpenConnection();
+                Connection.cmd.CommandType = System.Data.CommandType.Text;
+                Connection.cmd.CommandText = sqlQuery;
+                Connection.cmd.Parameters.Clear();
+                Connection.cmd.Parameters.AddWithValue("@_id_product", id);
+                Connection.cmd.Parameters.AddWithValue("@_amount_product", amount);
+                
+                Connection.cmd.ExecuteScalar();
+                MessageBox.Show("Update product successfully!");
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("update to product: " + e.Message);
+                return false;
+            }
+            finally
+            {
+                Connection.CloseConnection();
+            }
+        }
+
+
         public static List<Product> GetProductByType(string type)
         {
             List<Product> list = new List<Product>();
-           
+
             string sqlQuery = $"select _tb_product._id_product,_tb_product._name_product,_tb_product._category_product,_tb_product._price_product,_tb_image._image_product from _tb_product,_tb_image where _tb_product._id_product = _tb_image._id_product and _tb_product._category_product = @type; ";
             try
             {
@@ -152,10 +257,10 @@ namespace View.Database
                 Connection.cmd.Parameters.AddWithValue("@type", type);
                 Connection.rd = Connection.cmd.ExecuteReader();
                 byte check = 0;
-                while(Connection.rd.Read())
+                while (Connection.rd.Read())
                 {
                     check++;
-                    if (check == 1 && check<3)
+                    if (check == 1 && check < 3)
                     {
                         Product pr = new Product();
                         pr.Id_product = Connection.rd.GetValue(0).ToString();
@@ -174,7 +279,7 @@ namespace View.Database
             catch (Exception e)
             {
                 MessageBox.Show("Error get list Product " + e.Message);
-                
+
             }
             finally
             {
@@ -183,6 +288,42 @@ namespace View.Database
             }
             return list;
         }
+        public static bool checkProduct(string id)
+        {
+            string sqlQuery = $"select count(*) from _tb_product where _id_product=@id";
+            try
+            {
+                Connection.OpenConnection();
+                Connection.cmd.CommandType = CommandType.Text;
+                Connection.cmd.CommandText = sqlQuery;
+                Connection.cmd.Parameters.Clear();
+                Connection.cmd.Parameters.AddWithValue("@id", id);
+
+                int count = Convert.ToInt32(Connection.cmd.ExecuteScalar().ToString());
+                if (count != 0)
+                {
+                    
+                    return false;
+                }
+                else
+                {
+                    
+                    return true;
+
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error connecting...", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            finally
+            {
+                Connection.CloseConnection();
+            }
+        }
+
+
 
         public static List<History> GetProductInHistory(string phone)
         {
@@ -195,9 +336,9 @@ namespace View.Database
                 Connection.OpenConnection();
                 Connection.cmd.CommandType = CommandType.Text;
                 Connection.cmd.CommandText = sqlQuery;
-                Connection.cmd.Parameters.Clear();             
+                Connection.cmd.Parameters.Clear();
                 Connection.cmd.Parameters.AddWithValue("@phone", phone);
-                
+
                 Connection.rd = Connection.cmd.ExecuteReader();
                 byte check = 0;
                 while (Connection.rd.Read())
@@ -235,6 +376,7 @@ namespace View.Database
             return list;
         }
 
+
         public static ProductDetailModel GetDetailProductByID(string id)
         {
             ProductDetailModel pr = new ProductDetailModel();
@@ -251,16 +393,16 @@ namespace View.Database
                 byte check = 0;
                 while (Connection.rd.Read())
                 {
-                        check++;
-                        pr.Id_product = Connection.rd.GetValue(0).ToString();
-                        pr.Name_product = Connection.rd.GetValue(1).ToString();
-                        pr.Price_product = double.Parse(Connection.rd.GetValue(3).ToString());
-                        pr.Category_product = Connection.rd.GetValue(2).ToString();
-                        if(check==1)
+                    check++;
+                    pr.Id_product = Connection.rd.GetValue(0).ToString();
+                    pr.Name_product = Connection.rd.GetValue(1).ToString();
+                    pr.Price_product = double.Parse(Connection.rd.GetValue(3).ToString());
+                    pr.Category_product = Connection.rd.GetValue(2).ToString();
+                    if (check == 1)
                         pr.Image_product = Helpers.ConvertByteToImageBitmap((byte[])Connection.rd.GetValue(4));
-                        if (check == 2)
+                    if (check == 2)
                         pr.Image_product1 = Helpers.ConvertByteToImageBitmap((byte[])Connection.rd.GetValue(4));
-                        if (check == 3)
+                    if (check == 3)
                         pr.Image_product2 = Helpers.ConvertByteToImageBitmap((byte[])Connection.rd.GetValue(4));
                 }
             }
@@ -277,4 +419,5 @@ namespace View.Database
             return pr;
         }
     }
+
 }

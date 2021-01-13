@@ -50,13 +50,24 @@ namespace View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+
             LoginUser lu = new LoginUser(tbPhone.Text.Trim(), pbBox.Password.Trim());
-            if (Accountdatabase.CheckAccount(lu.Phone_number, lu.Password))
+            if (tbPhone.Text.Trim() == "admin" && pbBox.Password.Trim() == "admin")
             {
-                MainWindow m = new MainWindow(lu.Phone_number);
-                Window.GetWindow(this).Hide();  
-                m.Show();
-            } 
+
+                AdminWindow Dinhtam = new AdminWindow();
+                Window.GetWindow(this).Hide();
+                Dinhtam.Show();
+            }
+            else
+            {
+                if (Accountdatabase.CheckAccount(lu.Phone_number, lu.Password))
+                {
+                    MainWindow m = new MainWindow(lu.Phone_number);
+                    Window.GetWindow(this).Hide();
+                    m.Show();
+                }
+            }
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)

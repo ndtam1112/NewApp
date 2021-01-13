@@ -102,3 +102,110 @@ D:\New folder (2)\BuyNow\View\obj\Debug\View.csproj.GenerateResource.cache
 D:\New folder (2)\BuyNow\View\obj\Debug\View.csproj.CoreCompileInputs.cache
 D:\New folder (2)\BuyNow\View\obj\Debug\View.csproj.CopyComplete
 D:\My App\BuyNow\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\View.exe.config
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\View.exe
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\View.pdb
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\MaterialDesignColors.dll
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\WpfAnimatedGif.dll
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\WpfAnimatedGif.pdb
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\bin\Debug\WpfAnimatedGif.xml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\AdminWindow.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Login.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\MainWindow.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\SignUp.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Account.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Cart.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Category.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Home.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\ItemProduct.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\ItemCart.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\List_Product.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\ProductDetail.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\App.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View_Content.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View_MarkupCompile.cache
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View_MarkupCompile.lref
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\App.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Login.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\MainWindow.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\SignUp.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Style\Buttons.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Style\Color.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Style\Fonts.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Style\Texts.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\Style\Window.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Account.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Cart.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Category.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\Home.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\ItemProduct.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\ItemCart.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\List_Product.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\User Control\ProductDetail.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\AdminWindow.baml
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.g.resources
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.csproj.CopyComplete
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.exe
+C:\Users\Dinh Tam\Desktop\BuyNow-master\BuyNow-master\View\obj\Debug\View.pdb
+D:\My App\NewApp\View\obj\Debug\AdminWindow.g.cs
+D:\My App\NewApp\View\obj\Debug\Login.g.cs
+D:\My App\NewApp\View\obj\Debug\MainWindow.g.cs
+D:\My App\NewApp\View\obj\Debug\SignUp.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\Account.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\Cart.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\Category.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\Home.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\ItemProduct.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\ItemCart.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\List_Product.g.cs
+D:\My App\NewApp\View\obj\Debug\User Control\ProductDetail.g.cs
+D:\My App\NewApp\View\obj\Debug\App.g.cs
+D:\My App\NewApp\View\obj\Debug\View_Content.g.cs
+D:\My App\NewApp\View\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\My App\NewApp\View\obj\Debug\View_MarkupCompile.cache
+D:\My App\NewApp\View\obj\Debug\View_MarkupCompile.lref
+D:\My App\NewApp\View\bin\Debug\View.exe.config
+D:\My App\NewApp\View\bin\Debug\View.exe
+D:\My App\NewApp\View\bin\Debug\View.pdb
+D:\My App\NewApp\View\bin\Debug\MaterialDesignColors.dll
+D:\My App\NewApp\View\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\My App\NewApp\View\bin\Debug\WpfAnimatedGif.dll
+D:\My App\NewApp\View\bin\Debug\MaterialDesignColors.pdb
+D:\My App\NewApp\View\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\My App\NewApp\View\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\My App\NewApp\View\bin\Debug\WpfAnimatedGif.pdb
+D:\My App\NewApp\View\bin\Debug\WpfAnimatedGif.xml
+D:\My App\NewApp\View\obj\Debug\App.baml
+D:\My App\NewApp\View\obj\Debug\AdminWindow.baml
+D:\My App\NewApp\View\obj\Debug\Login.baml
+D:\My App\NewApp\View\obj\Debug\MainWindow.baml
+D:\My App\NewApp\View\obj\Debug\SignUp.baml
+D:\My App\NewApp\View\obj\Debug\Style\Buttons.baml
+D:\My App\NewApp\View\obj\Debug\Style\Color.baml
+D:\My App\NewApp\View\obj\Debug\Style\Fonts.baml
+D:\My App\NewApp\View\obj\Debug\Style\Texts.baml
+D:\My App\NewApp\View\obj\Debug\Style\Window.baml
+D:\My App\NewApp\View\obj\Debug\User Control\Account.baml
+D:\My App\NewApp\View\obj\Debug\User Control\Cart.baml
+D:\My App\NewApp\View\obj\Debug\User Control\Category.baml
+D:\My App\NewApp\View\obj\Debug\User Control\Home.baml
+D:\My App\NewApp\View\obj\Debug\User Control\ItemProduct.baml
+D:\My App\NewApp\View\obj\Debug\User Control\ItemCart.baml
+D:\My App\NewApp\View\obj\Debug\User Control\List_Product.baml
+D:\My App\NewApp\View\obj\Debug\User Control\ProductDetail.baml
+D:\My App\NewApp\View\obj\Debug\View.g.resources
+D:\My App\NewApp\View\obj\Debug\View.Properties.Resources.resources
+D:\My App\NewApp\View\obj\Debug\View.csproj.GenerateResource.cache
+D:\My App\NewApp\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+D:\My App\NewApp\View\obj\Debug\View.csproj.CopyComplete
+D:\My App\NewApp\View\obj\Debug\View.exe
+D:\My App\NewApp\View\obj\Debug\View.pdb

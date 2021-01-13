@@ -75,8 +75,6 @@ namespace View.Database
             {
                 Connection.CloseConnection();
             }
-
-
         }
         public static bool UpdateToPassWord(string phone, string password)
         {
